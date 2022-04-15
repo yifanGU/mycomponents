@@ -1,15 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <img alt="Vue logo" src="./assets/logo.png" />
+  <html-2-word msg="Welcome to Your Vue.js App">
+    <template  v-slot:content >我是内容</template>
+    
+    <template v-slot:button>
+      <button  class='btn btn-primary'>
+          {{ "hhh下载" }}
+      </button>
+    </template>
+  </html-2-word>
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Html2Word from './components/Html2Word.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Html2Word
   }
 }
 </script>
